@@ -25,7 +25,7 @@ nav {
     padding-top: 1em;
     padding-bottom: 1em;
 }
-h1{
+h1,h2{
     position:absolute;
     top: 50%;
     left: 50%;
@@ -63,7 +63,7 @@ a{
 #nuestraHistoria h2{
     padding-bottom: 1em;
 }
-#hero {
+#hero,img {
     width: 100%;
     height: 600px; /* Altura deseada para el contenedor del hero */
 }
@@ -82,4 +82,13 @@ a{
     z-index: 1; /* Asegura que el texto esté sobre la imagen */
     font-size: 3em;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 2); /* Agrega una sombra al texto */
+}
+
+#plato-one{
+    height: 300px;
+    width: 600px;
+}
+#plato-two{
+    height: 300px;
+    width: 600px;
 }
