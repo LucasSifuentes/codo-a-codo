@@ -3,35 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurante</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>bodegon</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-<!--Navbar-->
-    <nav class="nav-container" >
-        <a href="index.html">Nuestra Historia</a>
-        <a href="menu.html">Menu</a>
-        <a href="sucursales.html">Sucursales</a>
-        <a href="reserva.html">Reserva</a>
-    </nav>
+    <!--Navbar-->
+        <div class="navbar">
+        <!--Logotipo-->
+            <div class="logo"><a href="#">Logo</a></div>
+        <!--Elementos de la barra-->
+            <ul class="links">
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="">Menu</a></li>
+                <li><a href="">Reserva</a></li>
+                <li><a href="">Sucursales</a></li>
+            </ul>
+            <!--Login-->
+            <a href="" class="action_btn">Ingresar</a>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>        
+
+        <div class="dropdown_menu">
+            <li><a href="">Nosotros</a></li>
+                <li><a href="">Menu</a></li>
+                <li><a href="">Reserva</a></li>
+                <li><a href="">Sucursales</a></li>
+                <li><a href="" class="action_btn">Ingresar</a></li>
+        </div>
     </header>
 
-<!--Hero-->
-    <section id="hero">
-            <img src="./img/hero.jpg" alt="">
-            <h1>Parilla Familiar</h1>
-    </section>
-<!--Sección About Us-->
-    <section id="nuestraHistoria">
-        <p>En el corazón de la ciudad, Sabor Auténtico emerge como un oasis gastronómico, donde los sabores tradicionales se encuentran con la innovación culinaria para crear experiencias inolvidables. Desde su fundación en 2001, nuestro restaurante ha sido un refugio para los amantes de la buena mesa, un lugar donde cada plato cuenta una historia y cada bocado es una aventura.</p>    
-    </section>
-<!--Footer-->
-    <footer>
+    <main>
+        <section id="hero">
+            <h1>Sabor porteño</h1>
+            <p>En el corazón de la ciudad, Sabor Porteño emerge como un oasis gastronómico, donde los sabores tradicionales se encuentran con la innovación culinaria para crear experiencias inolvidables. Desde su fundación en 2001, nuestro restaurante ha sido un refugio para los amantes de la buena mesa, un lugar donde cada plato cuenta una historia y cada bocado es una aventura.</p>
+        </section>
 
-        <a href="">Whatsapp</a>
-        <a href="">Instagram</a>
-        <a href="">Facebook</a>
+        <section id="nosotros">
+            <div>
+                <h2>Nuestra Historia</h2>
+            </div>
+            <div>
+                <p>
+                    En 1978, en San Telmo, Buenos Aires, Don José Martínez fundó "Sabor Porteño" con la visión de ofrecer auténtica cocina argentina en un ambiente acogedor. Su dedicación a la calidad y al asado atrajo rápidamente a una clientela fiel. Hoy, "El Asador Criollo" es un referente de la gastronomía argentina, destacando cortes exquisitos de carne argentina y especialidades como empanadas criollas y vinos argentinos de calidad.
+                </p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <a href="">Contenido del footer</a>
+        
     </footer>
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn')
+        const toggleBtnIcon = document.querySelector('.toggle_btn i')
+        const dropDownMenu = document.querySelector('.dropdown_menu')
+
+        toggleBtn.onclick = function (){
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen
+            ? 'fa-solid fa-xmark'
+            : 'fa-solid fa-bars'
+        }
+    </script>
 </body>
 </html>
